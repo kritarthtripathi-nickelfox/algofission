@@ -1,0 +1,53 @@
+{
+    "projectdetail": [
+        {
+            "id": "webdevelopment",
+            "title": "Years of Industry Experience",
+            "description": "4+"
+        },
+        {
+            "id": "mobiledevelopment",
+            "title": "Delighted Clients Worldwide",
+            "description": " 51+"
+        },
+        {
+            "id": "uiux",
+            "title": "Projects Delivered Successfully",
+            "description": "37+"
+        }
+    ],
+    "howtowork": [
+        {
+            "title": "Requirements Gathering",
+            "description": "Understand client's goals and objectives.Identify and document project requirements.Conduct stakeholder interviews and workshops."
+        },
+        {
+            "title": "Planning and Design",
+            "description": "Create a project plan and timeline.Design the overall system architecture.Develop wireframes and prototypes for user interface (UI) design."
+        },
+        {
+            "title": "Development",
+            "description": "Write clean, efficient, and maintainable code.Implement front-end and back-end functionality.Conduct regular code reviews and unit testing."
+        },
+        {
+            "title": "Testing and Quality Assurance:",
+            "description": "Perform functional testing to ensure desired outcomes.Implement front-end and back-end functionality.Conduct regular code reviews and unit testing."
+        },
+        {
+            "title": "Deployment and Launch",
+            "description": "Prepare the system for production deployment.Set up hosting environment and configure servers.Migrate data and deploy the application."
+        },
+        {
+            "title": "User Training and Documentation",
+            "description": "Provide user training sessions and documentation.Create user manuals and guides for reference.Offer ongoing support and address user queries."
+        },
+        {
+            "title": "Maintenance and Updates",
+            "description": "Monitor system performance issues.Perform regular updates and patches.Implement feature enhancements and bug fixes."
+        },
+        {
+            "title": "Project Closure and Evaluation",
+            "description": "Conduct a project review to assess success criteria.Seek client feedback and evaluate project outcomes.Document lessons learned for future improvement."
+        }
+    ]
+}
