@@ -15,6 +15,7 @@ import OurServices from 'parts/OurServices'
 
 import Data from 'json/landingPage.json';
 import Projectdetail from 'json/projectdetail.json';
+import BlogLanding from 'parts/BlogLanding';
 
 export default class LandingPage extends Component {
   componentDidMount() {
@@ -30,8 +31,9 @@ export default class LandingPage extends Component {
         <Portfolio data={Data.portfolio} />
         <OurServices data={Data.ourservices} />
         <NumberofProject data={Projectdetail.projectdetail} />
+        <BlogLanding data={Data.blogs} />
         <Advantage data={Data.advantage} />
-        {/* <Testimonial data={Data.testimonial} /> */}
+        <Testimonial data={Data.testimonial} />
         <Discuss />
         <Footer />
       </>

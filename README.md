@@ -1,5 +1,5 @@
-# TenonTen Studio
-![alt text](https://github.com/racmathafidz/TenonTen/blob/master/src/assets/images/screely.png)
+# AlgoFission Studio
+![alt text](https://github.com/racmathafidz/AlgoFission/blob/master/src/assets/images/screely.png)
 
 ### About
 A software house profile website built with ReactJS and TailwindCSS:computer:

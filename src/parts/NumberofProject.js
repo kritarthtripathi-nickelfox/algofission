@@ -18,12 +18,12 @@ export default function Portfolio({ data }) {
         </p>
       </Fade>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 xl:gap-8 justify-items-center">
+      <div className=" grid grid-cols-2 sm:grid-cols-3 sm:gap-2 xl:gap-8 justify-items-center">
         {
           data.map((item, index) => (
             <Fade bottom delay={500 * index}>
               <Button type="link">
-                <div className="group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 hover:scale-110 portofolio-card " style={{ border: "0.2px solid #6610F2" }}>
+                <div className=" bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 hover:scale-110 portofolio-card " style={{ border: "0.2px solid #6610F2" }}>
                   <div className="relative">
                     <h2 className="text-center text-xl" style={{ color: '#6610F2', fontSize: "40px", fontWeight: "bold" }}>{item.description}</h2>
 

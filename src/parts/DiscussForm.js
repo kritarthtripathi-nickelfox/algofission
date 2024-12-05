@@ -1,136 +1,98 @@
-/* eslint-disable no-useless-escape */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable max-len */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-
 import Fade from 'react-reveal/Fade';
 import * as emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Form from 'elements/Form';
-import Button from 'elements/Button';
+import './DiscussForm.css'; // Import the CSS for styling
 
 export default function DiscussForm(props) {
   const { data, resetForm } = props;
 
-  const submitEmail = () => {
-    const {
-      name, company, email, phone, projectIdea,
-    } = data;
+  function submitEmail(e) {
+    e.preventDefault();
 
-    const templateParams = {
-      from_name: `${name} - ${company} ( ${phone} - ${email} )`,
-      to_name: 'kritarthsign2424@gmail.com',
-      message: projectIdea,
-    };
+    emailjs.sendForm('service_m6fop85', 'template_o91d9xc', e.target, 'MOUlVQVNt592rH8fA')
+      .then(() => {
+        toast.success("Success! We'll get back to you soon. Thank you!");
+        resetForm();
+      }, (error) => {
+        toast.error(error);
+      });
+  }
 
-    if (
-      name !== ''
-      && company !== ''
-      && email !== ''
-      && phone !== ''
-      && projectIdea !== ''
-    ) {
-      emailjs.send(
-        'service_h4gtndg',
-        'template_a9tvs7a',
-        templateParams,
-        'user_csqIxzN5mKsl1yw4ffJzV',
-      )
-        .then(() => {
-          toast.success('Success! we\'\ll get back to you soon. Thank you!');
-          resetForm();
-        }, (error) => {
-          toast.error(error);
-        });
-    } else {
-      toast.error('Please fill out the blank form.');
-    }
-  };
   const isLargeScreen = useMediaQuery({ minWidth: 720 });
 
   return (
-    <section className={`flex flex-col container mx-auto mt-10 justify-center ${isLargeScreen ? '120px' : 'large-screen-1'}`}>
+    <section className={`flex flex-col container mx-auto mt-24 justify-center ${isLargeScreen ? '120px' : 'large-screen-1'} md:top-10`}>
       <Fade bottom>
-        <h1 className="text-5xl text-theme-blue text-center font-bold xl:mt-12">Lets Discuss</h1>
-
-        <p className="font-light text-lg text-gray-400 text-center mb-12">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Please fill out the form below to discuss your project and we'll get back to you in less than 24 hours.
+        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl text-theme-blue text-center font-bold xl:mt-24">Ready to get started with us?</h1>
+        <p className="font-light text-xl text-black text-center mb-12">
+          Discover how nExcellence Care's compassionate and reliable support can bring a difference in your and loved one's lives
         </p>
 
         <div className="flex flex-col">
-          <div className="flex flex-col sm:flex-row mx-auto">
-            <Form
-              id="name"
-              name="name"
-              type="text"
-              value={data.name}
-              placeholder="Your name"
-              className=""
-              onChange={props.onChange}
-            />
-            <Form
-              id="company"
-              name="company"
-              type="text"
-              value={data.company}
-              placeholder="Your company"
-              className=""
-              onChange={props.onChange}
-            />
-          </div>
+          <form onSubmit={submitEmail}>
+            <div className="flex flex-col sm:flex-row mx-auto">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                value={data.name}
+                placeholder="Your name"
+                className="input"
+                onChange={props.onChange}
+              />
 
-          <div className="flex flex-col sm:flex-row mx-auto">
-            <Form
-              id="email"
-              name="email"
-              type="email"
-              value={data.email}
-              placeholder="Your email address"
-              className=""
-              onChange={props.onChange}
-            />
-            <Form
-              id="phone"
-              name="phone"
-              type="tel"
-              value={data.phone}
-              placeholder="Your contact number"
-              className=""
-              onChange={props.onChange}
-            />
-          </div>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                value={data.company}
+                placeholder="Company Name"
+                className="input"
+                onChange={props.onChange}
+              />
+            </div>
 
-          <div className="mx-auto">
-            <Form
-              id="projectIdea"
-              name="projectIdea"
-              type="textarea"
-              value={data.projectIdea}
-              placeholder="Explain about your project idea"
-              className=""
-              onChange={props.onChange}
-            />
-          </div>
+            <div className="flex flex-col sm:flex-row mx-auto">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={data.email}
+                placeholder="Your email address"
+                className="input"
+                onChange={props.onChange}
+              />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={data.phone}
+                placeholder="Your contact number"
+                className="input"
+                onChange={props.onChange}
+              />
+            </div>
 
-          <Button
-            className="text-xl mx-auto px-12 py-3 mt-5 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200 focus:outline-none"
-            type="button"
-            onClick={submitEmail}
-          >
-            Submit
-          </Button>
+            <div className="mx-auto">
+              <textarea
+                id="projectIdea"
+                name="projectIdea"
+                value={data.projectIdea}
+                placeholder="Post your query here."
+                className="input"
+                onChange={props.onChange}
+              />
+            </div>
+            <input type="submit" value="Send" className="submit-button" />
+          </form>
         </div>
       </Fade>
 
       <ToastContainer />
-
     </section>
   );
 }

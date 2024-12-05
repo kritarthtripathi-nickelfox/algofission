@@ -1,0 +1,33 @@
+
+  
+  .navbar-logo img {
+    width: 50px;
+    /* Set the logo width */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    border-radius: 80%;
+  
+  }
+  
+  .navbar-logo img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+    /* Slightly brighten the logo on hover */
+    border-radius: 80%;
+    cursor: pointer;
+    background-color: rgb(191, 245, 205);
+  }
+  
+  
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+  
+    .navbar-logo {
+      margin-bottom: 0px;
+    }
+  
+  }
+  

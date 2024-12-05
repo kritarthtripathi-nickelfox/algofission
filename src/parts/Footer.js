@@ -7,7 +7,7 @@ import Button from 'elements/Button';
 
 export default function Footer() {
   return (
-    <div className="bg-gray-50 border-t border-gray-200 pb-6">
+    <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 border-t border-gray-800 pb-6">
       <div className="container flex-col mx-auto ">
         <div className="flex flex-col sm:flex-row mt-8 justify-center">
           <div className="w-1/3 flex-col ml-16 mr-8">
@@ -24,10 +24,10 @@ export default function Footer() {
               Office
             </h1>
             <p className="text-lg text-gray-600 font-light">
-              tenonten2024@gmail.com
+              algofission2024@gmail.com
             </p>
             <p className="text-lg text-gray-600 font-light">
-              Manyata Tech Park, Bengaluru, Karnataka, India
+              127/B, Pitambra Vihar, Dewa Road, Chinhat, Lucknow, 226028
             </p>
           </div>
           <div className="w-1/3 ml-16 sm:ml-0 mt-0">
@@ -38,7 +38,7 @@ export default function Footer() {
             <Button href="https://www.instagram.com/ten0nten?igsh=N25yZHRtYzRpaTY0" type="link" target="_blank" className="flex text-lg text-gray-300 font-light hover:underline" isExternal>
               <FaInstagram className="mr-5 text-theme-white w-10 h-10" style={{ background: "linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",borderRadius:"10px"}}/>
             </Button>
-            <Button href="https://www.linkedin.com/company/tenonten/ " type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
+            <Button href="https://www.linkedin.com/company/algofission/ " type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
               <FaLinkedinIn className="mr-5 text-theme w-10 h-10" style={{color: "#0072b1"}}/>
             </Button>
             <Button href="" type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
@@ -69,14 +69,14 @@ export default function Footer() {
         </div>
         <div className="flex-col text-center mt-7">
           <p className="text-lg text-gray-400 font-light">
-            Copyright 2021 - All rights reserved - TenonTen
+            Copyright 2021 - All rights reserved - AlgoFission
           </p>
           <div className="flex-row">
             <p className="inline-block text-lg text-gray-600 font-light">
               Made with &#x2764; by&nbsp;
             </p>
             <Button href="" type="link" target="_blank" className="text-lg text-theme-purple font-light" isExternal>
-              TenonTen
+              AlgoFission
             </Button>
           </div>
         </div>

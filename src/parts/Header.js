@@ -54,7 +54,7 @@ export default function Header(props) {
   ];
 
   return (
-    <header className="header bg-white shadow-md" style={{ maxWidth: '100%', width: '100%' }}>
+    <header className="header bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 shadow-md" style={{ maxWidth: '100%', width: '100%' }}>
       <Fade>
         <div className="flex justify-between px-4 lg:px-0">
           <BrandIcon />
@@ -76,59 +76,23 @@ export default function Header(props) {
               Home
             </Button>
           </li>
-          <li
-            className={`py-2 lg:py-0 relative text-lg px-5 no-underline hover:underline`}
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
-          >
-            Services
-            {isServicesDropdownOpen && (
-              <div className="absolute left-0 mt-2 max-h-auto bg-white shadow-lg rounded " >
-                <ul className="grid grid-cols-4 gap-4 p-4" style={{ width: '750px' }}>
-                  {services.map((tech) => (
-                    <li key={tech.name}>
-                      <div className="text-base"><span style={{ backgroundColor: "#6610F2", color: "white", padding: "2px 15px 2px 15px", borderRadius: "7px" }}>{tech.name}</span></div>
-                      {tech.subcategories && (
-                        <ul className="mt-2">
-                          {tech.subcategories.map((subcat) => (
-                            <li className="text-gray-700 hover:text-blue-600 py-1 ml-5 text-sm" key={subcat}>
-                              {subcat}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+          <li className="py-2 lg:py-0 relative text-lg px-2 no-underline hover:underline">
+            <Button
+              type="link"
+              href="/servicespage"
+              className={`${path === '/servicespage' ? 'active-link' : ''}`}
+            >
+              Services
+            </Button>
           </li>
-          <li
-            className={`py-2 lg:py-0 relative text-lg px-5 no-underline hover:underline`}
-            onMouseEnter={() => setIsTechnologiesDropdownOpen(true)}
-            onMouseLeave={() => setIsTechnologiesDropdownOpen(false)}
-          >
-            Technologies
-            {isTechnologiesDropdownOpen && (
-              <div className="absolute left-0 mt-2 max-h-auto bg-white shadow-lg rounded " >
-                <ul className="grid grid-cols-4 gap-4 p-4" style={{ width: '650px' }}>
-                  {technologies.map((tech) => (
-                    <li key={tech.name}>
-                      <div className="text-base"><span style={{ backgroundColor: "#6610F2", color: "white", padding: "2px 15px 2px 15px", borderRadius: "7px" }}>{tech.name}</span></div>
-                      {tech.subcategories && (
-                        <ul className="mt-2">
-                          {tech.subcategories.map((subcat) => (
-                            <li className="text-gray-700 hover:text-blue-600 py-1 ml-5 text-sm" key={subcat}>
-                              {subcat}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+          <li className="py-2 lg:py-0 relative text-lg px-2 no-underline hover:underline">
+            <Button
+              type="link"
+              href="/technologies"
+              className={`${path === '/technologies' ? 'active-link' : ''}`}
+            >
+              Technologies
+            </Button>
           </li>
           <li className="py-2 lg:py-0">
             <Button
@@ -148,9 +112,18 @@ export default function Header(props) {
               About Us
             </Button>
           </li>
+          <li className="py-2 lg:py-0">
+            <Button
+              className={`${path === '/blogs' ? 'active-link' : ''} text-lg px-5 no-underline hover:underline`}
+              type="link"
+              href="/blogs"
+            >
+              Blogs
+            </Button>
+          </li>
           <li>
             <Button
-              className="text-lg mx-auto ml-3 px-6 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
+              className="text-lg mx-auto ml-3 px-2 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
               type="link"
               href="/discuss-project"
             >
@@ -263,6 +236,15 @@ export default function Header(props) {
                 href="/aboutus"
               >
                 About Us
+              </Button>
+            </li>
+            <li className="py-2 bg-white">
+              <Button
+                className={`${path === '/blogs' ? 'active-link' : ''} px-10 no-underline hover:underline`}
+                type="link"
+                href="/blogs"
+              >
+                Blogs
               </Button>
             </li>
             <li className="mx-auto my-9 bg-white">

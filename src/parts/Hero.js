@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="hero mt-16">
       <Fade bottom>
-        <div className="w-full lg:w-1/2 xl:pl-12 sm:pr-2 sm:mt-25 xl:mt-16 2xl:mt-16">
+        <div className=" w-full lg:w-1/2 xl:pl-12 sm:pr-2 mt-16 sm:mt-25 xl:mt-16 2xl:mt-16">
           <h1 className="text-5xl sm:text-6xl text-theme-blue font-bold leading-tight mb-5">
             Growing Your Business
             {' '}

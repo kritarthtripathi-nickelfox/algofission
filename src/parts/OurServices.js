@@ -23,7 +23,7 @@ export default function OurServices({ data }) {
           data.map((item, index) => (
             <Fade bottom delay={500 * index}>
               <Button type="link" href={`/service/${item.id}`}>
-                <div className="group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 sm:hover:scale-70 xl:hover:scale-110 portofolio-card">
+                <div className=" bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 group rounded-2xl shadow-xl w-auto w-11/12 m-3 transform transition duration-500 sm:hover:scale-70 xl:hover:scale-110 portofolio-card">
                   <div className="relative">
                     <img src={item.imageUrl} alt="Portfolio" className="rounded-t-2xl z-0" />
                     <div className="absolute flex w-full h-full top-0 opacity-0 bg-black justify-center rounded-t-2xl rounded-b img-hover">
@@ -37,7 +37,7 @@ export default function OurServices({ data }) {
                   </div>
                   <div className="py-4">
                     <h2 className="text-theme-blue text-center text-xl">{item.title}</h2>
-                    <p className="font-light text-gray-400 text-center mr-3 ml-3" style={{ textAlign: "justify" }}>{item.type}</p>
+                    <p className="font-light text-gray-900 text-center mr-3 ml-3" style={{ textAlign: "justify" }}>{item.type}</p>
                   </div>
                 </div>
               </Button>

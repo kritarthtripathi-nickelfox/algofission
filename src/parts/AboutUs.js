@@ -24,15 +24,15 @@ const AboutUs = (props) => {
             </>
             <Fade bottom delay={300 * 1}>
                 <section style={{ marginTop: marginTop }}>
-                    <div className={`flex flex-col mt-2 mb-12 mx-8 sm:mx-16 xl:mx-28 `}>
+                    <div className={`flex flex-col mt-2 mb-12 mx-8 sm:mx-16 xl:mx-28 bg-gradient-to-r `}>
                         <h1 className="text-3xl text-theme-blue font-bold mb-3">
                             About Us
                         </h1>
 
-                        <p className="font-light text-lg text-gray-400 text-justify">
-                            At TenonTen, we believe in the power of collaboration and transparency. We work closely with our clients to understand their goals, challenges, and vision, allowing us to develop personalized software solutions that align with their objectives. From initial consultation to final delivery, our streamlined development process ensures efficient project management and timely delivery, all while maintaining the highest standards of quality.
+                        <p className="font-light text-lg text-gray-1000 text-justify">
+                            At AlgoFission, we believe in the power of collaboration and transparency. We work closely with our clients to understand their goals, challenges, and vision, allowing us to develop personalized software solutions that align with their objectives. From initial consultation to final delivery, our streamlined development process ensures efficient project management and timely delivery, all while maintaining the highest standards of quality.
 
-                            With a customer-centric approach, we strive to build long-lasting relationships, providing ongoing support and maintenance to ensure the continued success of our clients' software solutions. Together, let's unlock the full potential of technology and embark on a digital journey that propels your business forward. Discover the difference of working with a dedicated and experienced software development team at TenonTen.
+                            With a customer-centric approach, we strive to build long-lasting relationships, providing ongoing support and maintenance to ensure the continued success of our clients' software solutions. Together, let's unlock the full potential of technology and embark on a digital journey that propels your business forward. Discover the difference of working with a dedicated and experienced software development team at AlgoFission.
                         </p>
                     </div>
                     <h1 className="text-3xl text-center text-theme-blue font-bold mb-3">

@@ -1,0 +1,343 @@
+/* styles.css */
+.card-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5a189a;
+    transition: top 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.card-hover:hover::before {
+    top: 0;
+}
+
+
+.card-gradient-hover {
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease-in-out;
+}
+
+.card-gradient-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#7f3cb9;
+    transition: background 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card-gradient-hover:hover::before {
+    /* background: linear-gradient(0deg, #6a2875 0%, #8ac53f 100%); */
+    background: #5a189a;
+    z-index: 1;
+}
+
+.card-gradient-hover>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background Container */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Floating Circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 15s infinite ease-in-out;
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    background: #6a2875;
+    top: 20%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.circle2 {
+    width: 400px;
+    height: 1900px;
+    background: #8ac53f;
+    bottom: 30%;
+    right: 20%;
+    animation-duration: 18s;
+}
+
+.circle3 {
+    width: 100px;
+    height: 100px;
+    background: #34ace0;
+    top: 40%;
+    right: 10%;
+    animation-duration: 10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* styles.css */
+.animated-background {
+    background: #e6e7e9;
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap");
+
+.how-to-work-section {
+    padding: 2rem;
+}
+
+.how-to-work-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.how-to-work-section ol {
+    width: min(80rem, 100%);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    counter-reset: stepnr;
+}
+
+.how-to-work-section li {
+    counter-increment: stepnr;
+    width: 22rem;
+    aspect-ratio: auto; /* Removed fixed ratio for cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 15px; /* Changed to card shape */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem; /* Increased padding for card feel */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* */
+
+.how-to-work-section li::before {
+    content: counter(stepnr);
+    color: var(--accent-color);
+    font-size: 2rem; /* Adjusted size for card design */
+    font-weight: bold;
+    position: absolute;
+    top: 0.5rem;
+    left: 7rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.how-to-work-section li .icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+
+.how-to-work-section li .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    z-index: 2;
+}
+
+.how-to-work-section li .descr {
+    font-size: 0.9rem;
+    font-weight: 300;
+    z-index: 2;
+}
+
+.how-to-work-section ol li:nth-child(6n + 1) {
+    --accent-color:#7197d3
+}
+
+.how-to-work-section ol li:nth-child(6n + 2) {
+    --accent-color: #4cbccb
+}
+
+.how-to-work-section ol li:nth-child(6n + 3) {
+    --accent-color: #7197d3
+}
+
+.how-to-work-section ol li:nth-child(6n + 4) {
+    --accent-color: #ae78cb
+}
+
+.how-to-work-section ol li:nth-child(6n + 5) {
+    --accent-color: #7dc7a4
+}
+
+.how-to-work-section ol li:nth-child(6n + 6) {
+    --accent-color: #f078c2
+}
+
+/* Initial green outline with hover transition to purple */
+.how-to-work-section li::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px; /* Card-like border */
+    border: 15px solid #7f3cb9;
+    transition: border-color 0.4s ease;
+    z-index: 0;
+}
+.how-to-work-section li:hover::after {
+    border-color: var(--accent-color);
+    /* Ensure hover also uses dynamic accent color */
+    border-radius: 15px;
+    /* Reduce radius on hover for a subtle effect */
+}
+
+/* body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  } */
+  
+  .App{
+    text-align: center;
+    position: relative;
+    height: 120vh;
+    border-top-width: 1px;
+    border-color: #e5e7eb; /* Light gray color */
+    padding-bottom: 1.5rem;
+  }
+  
+  .waveContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    max-width: 100%; /* You can specify a fixed max-width if needed */
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .waveContainer > .wave{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footerContent{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* text-align: center; */
+    color: white;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2rem;
+    justify-content: center;
+  } 
+  /* @media (min-width: 640px) {
+    .footerContent {
+      flex-direction: row; 
+    }
+  } */
+  
+ /* .icon{
+    margin-left: 10px;
+  } */
+
+  @media (max-width: 400px) {
+    .how-to-work-section h1 {
+        font-size: 5vw;
+    }
+    .how-to-work-section li {
+        width: 100%;
+        padding: 2rem;
+    }
+    .how-to-work-section li .icon {
+        font-size: 1.2rem;
+    }
+    .how-to-work-section li .title {
+        font-size: 1rem;
+    }
+    .how-to-work-section li .descr {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 250px) {
+    .how-to-work-section li {
+        padding: 0.5rem;
+    }
+    .how-to-work-section li .title {
+        font-size: 0.9rem;
+    }
+    .how-to-work-section li .descr {
+        font-size: 0.5rem;
+    }
+}
