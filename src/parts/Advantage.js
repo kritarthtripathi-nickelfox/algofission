@@ -19,37 +19,37 @@ export default function Advantage({ data }) {
         <div className="flex flex-col sm:flex-row">
           <div className="flex-col">
             {
-                        data[0].map((item, index) => (
-                          <Fade bottom delay={500 * index}>
-                            <div>
-                              <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                                <img src={item.imageUrl} alt="" className="w-1/3" />
-                                <div className="flex-col pl-5">
-                                  <h2 className="text-theme-blue text-2xl">{item.title}</h2>
-                                  <p className="font-light text-gray-400">{item.description}</p>
-                                </div>
-                              </div>
-                            </div>
-                          </Fade>
-                        ))
-                    }
+              data[0].map((item, index) => (
+                <Fade bottom delay={500 * index}>
+                  <div>
+                    <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
+                      <img src={item.imageUrl} alt="" className="w-1/3" />
+                      <div className="flex-col pl-5">
+                        <h2 className="text-theme-blue text-2xl">{item.title}</h2>
+                        <p className="font-light text-gray-400">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Fade>
+              ))
+            }
           </div>
           <div className="flex-col -mt-4 sm:mt-14">
             {
-                        data[1].map((item, index) => (
-                          <Fade bottom delay={500 * index}>
-                            <div>
-                              <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                                <img src={item.imageUrl} alt="" className="w-1/3" />
-                                <div className="flex-col pl-5">
-                                  <h2 className="text-theme-blue text-2xl">{item.title}</h2>
-                                  <p className="font-light text-gray-400">{item.description}</p>
-                                </div>
-                              </div>
-                            </div>
-                          </Fade>
-                        ))
-                    }
+              data[1].map((item, index) => (
+                <Fade bottom delay={500 * index}>
+                  <div>
+                    <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flex flex-row items-center p-3 my-6 mx-3 sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl shadow-xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
+                      <img src={item.imageUrl} alt="" className="w-1/3" />
+                      <div className="flex-col pl-5">
+                        <h2 className="text-theme-blue text-2xl">{item.title}</h2>
+                        <p className="font-light text-gray-400">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Fade>
+              ))
+            }
           </div>
         </div>
       </div>

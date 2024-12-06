@@ -24,7 +24,7 @@ const AboutUs = (props) => {
             </>
             <Fade bottom delay={300 * 1}>
                 <section style={{ marginTop: marginTop }}>
-                    <div className={`flex flex-col mt-2 mb-12 mx-8 sm:mx-16 xl:mx-28 bg-gradient-to-r `}>
+                    <div className={`flex flex-col mt-2 mb-12 mx-8 sm:mx-16 xl:mx-28 bg-white `}>
                         <h1 className="text-3xl text-theme-blue font-bold mb-3">
                             About Us
                         </h1>
@@ -40,12 +40,12 @@ const AboutUs = (props) => {
                     </h1>
                     <div className="flex flex-wrap justify-center">
                         {Data.howtowork.map((metholodigies, index) => (
-                            <div key={index} className="flip-card w-64 h-64 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden relative mx-4 my-4 text-justify" style={{ borderRadius: "15px" }} >
+                            <div key={index} className="flip-card w-64 h-64 bg-white border rounded-lg shadow-lg overflow-hidden relative mx-4 my-4 text-justify" >
                                 <div className="flip-card-inner absolute inset-0 transition-transform duration-500 transform">
-                                    <div className="flip-card-front flex items-center justify-center h-full bg-blue-500 text-white rounded-lg">
-                                        <h1 className="text-2xl font-bold text-center">{metholodigies.title}</h1>
+                                    <div className="flip-card-front flex items-center justify-center h-full text-black-text bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-lg">
+                                        <h1 className="text-2xl text-black-text font-bold text-center">{metholodigies.title}</h1>
                                     </div>
-                                    <div className="flip-card-back flex flex-col items-center justify-center h-full bg-white text-gray-800 transform rotate-y-180 absolute inset-0 rounded-lg">
+                                    <div className="flip-card-back flex flex-col items-center justify-center h-full text-gray-800 transform rotate-y-180 absolute inset-0 rounded-lg">
                                         <p className="px-4 py-2 text-center">{metholodigies.description}</p>
                                     </div>
                                 </div>

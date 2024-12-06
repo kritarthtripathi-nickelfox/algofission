@@ -32,18 +32,18 @@ export default function Footer() {
           </div>
           <div className="w-1/3 ml-16 sm:ml-0 mt-0">
             <h1 className="text-lg text-theme-blue pt-4 pb-2">
-              Social Media 
+              Social Media
             </h1>
-            <div style={{display:"flex"}}>
-            <Button href="https://www.instagram.com/ten0nten?igsh=N25yZHRtYzRpaTY0" type="link" target="_blank" className="flex text-lg text-gray-300 font-light hover:underline" isExternal>
-              <FaInstagram className="mr-5 text-theme-white w-10 h-10" style={{ background: "linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",borderRadius:"10px"}}/>
-            </Button>
-            <Button href="https://www.linkedin.com/company/algofission/ " type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
-              <FaLinkedinIn className="mr-5 text-theme w-10 h-10" style={{color: "#0072b1"}}/>
-            </Button>
-            <Button href="" type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
-              <FaFacebook className="mr-5 text-theme w-10 h-10" style={{color:"#1877F2"}}/>
-            </Button>
+            <div style={{ display: "flex" }}>
+              <Button href="https://www.instagram.com/ten0nten?igsh=N25yZHRtYzRpaTY0" type="link" target="_blank" className="flex text-lg text-gray-300 font-light hover:underline" isExternal>
+                <FaInstagram className="mr-5 text-theme-white w-10 h-10" style={{ background: "linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)", borderRadius: "10px" }} />
+              </Button>
+              <Button href="https://www.linkedin.com/company/algofission/ " type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
+                <FaLinkedinIn className="mr-5 text-theme w-10 h-10" style={{ color: "#0072b1" }} />
+              </Button>
+              <Button href="" type="link" target="_blank" className="flex text-lg text-gray-600 font-light hover:underline" isExternal>
+                <FaFacebook className="mr-5 text-theme w-10 h-10" style={{ color: "#1877F2" }} />
+              </Button>
             </div>
           </div>
           {/* <div className="w-1/3 ml-16 sm:ml-0 mt-0">

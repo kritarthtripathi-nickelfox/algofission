@@ -48,20 +48,19 @@ const TechnologiesPage = (props) => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-r p-6">
+        <div className="min-h-screen">
             <Header {...props} />
-            <h1 className="text-4xl mt-16 font-bold text-center mb-6">Technologies</h1>
+            <h1 className="text-4xl mt-20 font-bold text-center mb-6">Technologies</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                 {categories.map((category) => (
                     <Link
                         key={category.name}
                         to={`/category/${category.name}`}
-                        className="p-4 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105"
-                        style={{ backgroundColor: "#843ff4" }}
+                        className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105"
                     >
-                        <h2 className="text-lg text-white font-semibold mb-2">{category.name}</h2>
-                        <p className="text-sm text-white mb-4">{category.description}</p>
-                        <ul className="mt-2 list-disc list-inside text-white">
+                        <h2 className="text-lg text-black-text font-semibold mb-2">{category.name}</h2>
+                        <p className="text-sm text-black-text mb-4">{category.description}</p>
+                        <ul className="mt-2 list-disc list-inside text-black-text">
                             {category.tools.map((tool) => (
                                 <li key={tool}>{tool}</li>
                             ))}

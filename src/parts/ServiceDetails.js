@@ -1,4 +1,3 @@
-// src/pages/ServiceDetails.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Header from 'parts/Header';
@@ -16,7 +15,7 @@ const services = [
         subcategories: ['iOS Development', 'Android Development', 'Cross-Platform Development', 'App Maintenance'],
     },
     {
-        name: 'UI/UX Design',
+        name: 'UI\UX Design',
         description: 'UI/UX Design involves creating user-friendly interfaces and optimizing the user experience through research, wireframing, prototyping, and visual design.',
         subcategories: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design'],
     },
@@ -57,17 +56,23 @@ const ServiceDetails = (props) => {
     return (
         <div className="min-h-screen bg-gray-100 p-6">
             <Header {...props} />
-            <div className="max-w-4xl mx-auto mt-20 mb-20">
+            <div className="max-w-6xl mx-auto mt-20 mb-20">
                 <h1 className="text-4xl font-bold text-center mb-6">{service.name}</h1>
-                <p className="text-lg mb-4">{service.description}</p>
-                <h2 className="text-2xl font-semibold mb-4">Subcategories</h2>
-                <ul className="list-disc list-inside">
+                <p className="text-lg text-center mb-8">{service.description}</p>
+                <h2 className="text-2xl font-semibold mb-6 text-center">Subcategories</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {service.subcategories.map((subcategory) => (
-                        <li key={subcategory} className="mb-2">
-                            {subcategory}
-                        </li>
+                        <div
+                            key={subcategory}
+                            className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105"
+                        >
+                            <h3 className="text-lg font-bold mb-2 text-black-text">{subcategory}</h3>
+                            <p className="text-sm text-gray-700">
+                                Learn more about <span className="font-semibold">{subcategory}</span>.
+                            </p>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
             <Footer />
         </div>

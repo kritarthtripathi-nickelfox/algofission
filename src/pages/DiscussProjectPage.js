@@ -24,38 +24,38 @@ export default class DiscussProjectPage extends Component {
     window.scroll(0, 0);
   }
 
-    onChange = (event) => {
-      this.setState({
-        data: {
-          // eslint-disable-next-line react/no-access-state-in-setstate
-          ...this.state.data,
-          [event.target.name]: event.target.value,
-        },
-      });
-    }
+  onChange = (event) => {
+    this.setState({
+      data: {
+        // eslint-disable-next-line react/no-access-state-in-setstate
+        ...this.state.data,
+        [event.target.name]: event.target.value,
+      },
+    });
+  }
 
-    resetForm = () => {
-      this.setState({
-        data: {
-          name: '',
-          company: '',
-          email: '',
-          phone: '',
-          projectIdea: '',
-        },
-      });
-    }
+  resetForm = () => {
+    this.setState({
+      data: {
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        projectIdea: '',
+      },
+    });
+  }
 
-    render() {
-      const { data } = this.state;
+  render() {
+    const { data } = this.state;
 
-      return (
-        <>
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Header {...this.props} />
-          <DiscussForm data={data} onChange={this.onChange} resetForm={this.resetForm} />
-          <Footer />
-        </>
-      );
-    }
+    return (
+      <>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Header {...this.props} />
+        <DiscussForm data={data} onChange={this.onChange} resetForm={this.resetForm} />
+        <Footer />
+      </>
+    );
+  }
 }

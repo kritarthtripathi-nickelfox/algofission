@@ -280,33 +280,33 @@
         }
     ],
     "blogs": [
-        { 
-          "id": 1, 
-          "title": "Games", 
-          "description": "Explore the latest games, reviews, and trends in the gaming industry. Stay updated with new releases and gaming news.", 
-          "image": "../assets/images/gaming.jpg", 
-          "link": "/blogs/games" 
+        {
+            "id": 1,
+            "title": "Games",
+            "description": "Explore the latest games, reviews, and trends in the gaming industry. Stay updated with new releases and gaming news.",
+            "image": "../assets/images/gaming.jpg",
+            "link": "/blogs/games"
         },
-        { 
-          "id": 2, 
-          "title": "Food Catering", 
-          "description": "Discover delicious food services for all occasions, including weddings, parties, and corporate events.", 
-          "image": "../assets/images/food.jpg", 
-          "link": "/blogs/food-catering" 
+        {
+            "id": 2,
+            "title": "Food Catering",
+            "description": "Discover delicious food services for all occasions, including weddings, parties, and corporate events.",
+            "image": "../assets/images/food.jpg",
+            "link": "/blogs/food-catering"
         },
-        { 
-          "id": 3, 
-          "title": "Travel Guides", 
-          "description": "Find the best travel destinations, tips for planning your trip, and must-visit locations around the globe.", 
-          "image": "../assets/images/travel.jpg", 
-          "link": "/blogs/travel" 
+        {
+            "id": 3,
+            "title": "Travel Guides",
+            "description": "Find the best travel destinations, tips for planning your trip, and must-visit locations around the globe.",
+            "image": "../assets/images/travel.jpg",
+            "link": "/blogs/travel"
         },
-        { 
-            "id": 3, 
-            "title": "Travel Guides", 
-            "description": "Find the best travel destinations, tips for planning your trip, and must-visit locations around the globe.", 
-            "image": "../assets/images/travel.jpg", 
-            "link": "/blogs/travel" 
-          }
+        {
+            "id": 3,
+            "title": "Travel Guides",
+            "description": "Find the best travel destinations, tips for planning your trip, and must-visit locations around the globe.",
+            "image": "../assets/images/travel.jpg",
+            "link": "/blogs/travel"
+        }
     ]
 }

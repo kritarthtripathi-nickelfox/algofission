@@ -15,7 +15,7 @@ const services = [
         subcategories: ['iOS Development', 'Android Development', 'Cross-Platform Development', 'App Maintenance'],
     },
     {
-        name: 'UI/UX Design',
+        name: 'UI\UX Design',
         description: 'UI/UX Design involves creating user-friendly interfaces and optimizing the user experience through research, wireframing, prototyping, and visual design.',
         subcategories: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design'],
     },
@@ -38,7 +38,7 @@ const services = [
 
 const ServicesPage = (props) => {
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-gray-100">
             <Header {...props} />
             <h1 className="text-4xl font-bold text-center mb-6 mt-20">Services</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -47,13 +47,13 @@ const ServicesPage = (props) => {
                         key={service.name}
                         to={`/services/${service.name}`} // Dynamic route based on service name
                         className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105"
-                        // style={{ backgroundColor: "#843ff4" }}
+                    // style={{ backgroundColor: "#843ff4" }}
                     >
-                        <h2 className="text-lg text-white font-semibold mb-2">
+                        <h2 className="text-lg text-black-text font-semibold mb-2">
                             {service.name}
                         </h2>
-                        <p className="text-white mb-4">{service.description}</p>
-                        <ul className="mt-2 list-disc list-inside text-white">
+                        <p className="text-black-text mb-4">{service.description}</p>
+                        <ul className="mt-2 list-disc list-inside text-black-text">
                             {service.subcategories.map((subcategory) => (
                                 <li key={subcategory}>{subcategory}</li>
                             ))}
