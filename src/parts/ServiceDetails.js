@@ -54,10 +54,10 @@ const ServiceDetails = (props) => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-gray-100 ">
             <Header {...props} />
-            <div className="max-w-6xl mx-auto mt-20 mb-20">
-                <h1 className="text-4xl font-bold text-center mb-6">{service.name}</h1>
+            <div className="max-w-6xl mx-auto mt-24 mb-20">
+                <h1 className="text-4xl font-bold text-center mt-20 mb-6">{service.name}</h1>
                 <p className="text-lg text-center mb-8">{service.description}</p>
                 <h2 className="text-2xl font-semibold mb-6 text-center">Subcategories</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

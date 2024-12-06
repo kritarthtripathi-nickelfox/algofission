@@ -22,7 +22,7 @@ export default class ProjectPage extends Component {
                 <Header {...this.props} />
                 <>
                     <Fade bottom>
-                        <h1 className="text-5xl text-theme-blue text-center font-bold " style={{ marginTop: "100px" }}>{detailData[0].title}</h1>
+                        <h1 className="text-5xl text-black-text text-center font-bold " style={{ marginTop: "100px" }}>{detailData[0].title}</h1>
                     </Fade>
 
                     <Fade bottom delay={300 * 1}>
@@ -37,16 +37,16 @@ export default class ProjectPage extends Component {
                             Project Detail
                         </h1>
 
-                        <p className="font-light text-lg text-gray-400 text-justify">
+                        <p className="font-light text-lg text-gray-800 text-justify">
                             {detailData[0].description}
                         </p>
                     </div>
                     <div className="flex flex-wrap justify-center">
                         {detailData[0].metholodigies.map((metholodigies, index) => (
-                            <div key={index} className="flip-card w-64 h-64 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden relative mx-4 my-4" style={{ borderRadius: "15px" }}>
+                            <div key={index} className="flip-card w-64 h-64 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden relative mx-4 my-4">
                                 <div className="flip-card-inner absolute inset-0 transition-transform duration-500 transform">
-                                    <div className="flip-card-front flex items-center justify-center h-full bg-blue-500 text-white rounded-lg">
-                                        <h1 className="text-2xl font-bold text-center">{metholodigies.title}</h1>
+                                    <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 flip-card-front flex items-center justify-center h-full bg-blue-100 text-white rounded-lg">
+                                        <h1 className="text-2xl font-bold text-center text-gray-800">{metholodigies.title}</h1>
                                     </div>
                                     <div className="flip-card-back flex flex-col items-center justify-center h-full bg-white text-gray-800 transform rotate-y-180 absolute inset-0 rounded-lg">
                                         <p className="px-4 py-2 text-center">{metholodigies.description}</p>

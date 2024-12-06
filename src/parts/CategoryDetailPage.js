@@ -64,14 +64,14 @@ const CategoryDetailPage = (props) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-6">
+    <div className="min-h-screen bg-white">
       <Header {...props} />
       <div className="container mx-auto mt-16">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800 mt-20">
           {category.name} Details
         </h1>
 
-        <div className="bg-white rounded-lg shadow-xl p-8 transform transition duration-500 hover:scale-105 mb-20">
+        <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-xl p-8 transform transition duration-500 hover:scale-105 mb-20">
           <h2 className="text-2xl font-bold text-gray-700 mb-4 border-b-2 border-indigo-300 pb-2">
             About {category.name}
           </h2>

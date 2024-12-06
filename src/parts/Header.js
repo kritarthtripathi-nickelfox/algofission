@@ -153,72 +153,23 @@ export default function Header(props) {
                 Home
               </Button>
             </li>
-            <li className="py-2 bg-white relative">
+            <li className="py-2 bg-white">
               <Button
-                className={`${path === '/technologies' ? 'active-link' : ''} px-10 no-underline hover:underline`}
+                className={`${path === '/servicespage' ? 'active-link' : ''} px-10 no-underline hover:underline`}
                 type="link"
-                href=""
-                onClick={() => {
-                  setIsMobileDropdownOpen(!isMobileDropdownOpen);
-                  setIsServicesDropdownOpen(true); setIsTechnologiesDropdownOpen(false)
-                }}
+                href="/servicespage"
               >
                 Services
               </Button>
-              {isMobileDropdownOpen && isServicesDropdownOpen && (
-                <div className="mt-2 bg-white shadow-lg rounded ml-10 max-h-60 overflow-y-auto">
-                  <ul className="p-4">
-                    {services.map((tech) => (
-                      <li key={tech.name}>
-                        <div className="text-base"><span style={{ backgroundColor: "#6610F2", color: "white", padding: "2px 15px 2px 15px", borderRadius: "7px" }}>{tech.name}</span></div>
-                        {tech.subcategories && (
-                          <ul className="mt-2 ml-4">
-                            {tech.subcategories.map((subcat) => (
-                              <li className="text-gray-700 hover:text-blue-600 py-1 text-sm" key={subcat}>
-                                {subcat}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </li>
-            <li className="py-2 bg-white relative">
+            <li className="py-2 bg-white">
               <Button
                 className={`${path === '/technologies' ? 'active-link' : ''} px-10 no-underline hover:underline`}
                 type="link"
-                href=""
-                onClick={() => {
-                  setIsMobileDropdownOpen(!isMobileDropdownOpen);
-                  setIsTechnologiesDropdownOpen(true); setIsServicesDropdownOpen(false)
-                }}
-
+                href="/technologies"
               >
                 Technologies
               </Button>
-              {isMobileDropdownOpen && isTechnologiesDropdownOpen && (
-                <div className="mt-2 bg-white shadow-lg rounded ml-10 max-h-60 overflow-y-auto mb-2">
-                  <ul className="p-4">
-                    {technologies.map((tech) => (
-                      <li key={tech.name}>
-                        <div className="text-base"><span style={{ backgroundColor: "#6610F2", color: "white", padding: "2px 15px 2px 15px", borderRadius: "7px" }}>{tech.name}</span></div>
-                        {tech.subcategories && (
-                          <ul className="mt-2 ml-4">
-                            {tech.subcategories.map((subcat) => (
-                              <li className="text-gray-700 hover:text-blue-600 py-1 text-sm" key={subcat}>
-                                {subcat}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </li>
             <li className="py-2 bg-white">
               <Button
